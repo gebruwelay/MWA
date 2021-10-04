@@ -1,0 +1,62 @@
+[{
+  "_id": {
+    "$oid": "615a48f703b74aa7621b19f8"
+  },
+  "name": "Game of thrones",
+  "releaseDate": {
+    "$date": "2012-07-01T05:00:00Z"
+  },
+  "__v": 1,
+  "season": [
+    {
+      "name": "season 1",
+      "part": "1",
+      "releaseDate": {
+        "$date": "2011-04-17T05:00:00Z"
+      },
+      "_id": {
+        "$oid": "615a5160fa26c892225d389f"
+      }
+    },
+    {
+      "name": "season 3",
+      "part": "3",
+      "releaseDate": {
+        "$date": "2013-03-31T05:00:00Z"
+      },
+      "_id": {
+        "$oid": "615a52c3fa26c892225d38ad"
+      }
+    },
+    {
+      "name": "season 2",
+      "part": "2",
+      "releaseDate": {
+        "$date": "2012-04-01T05:00:00Z"
+      },
+      "_id": {
+        "$oid": "615a52ddfa26c892225d38b2"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "615a493a03b74aa7621b19fa"
+  },
+  "name": "money heist",
+  "season": [],
+  "releaseDate": {
+    "$date": "2017-05-02T05:00:00Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "615a49ad03b74aa7621b19fc"
+  },
+  "name": "big bang theory",
+  "season": [],
+  "releaseDate": {
+    "$date": "2007-09-24T05:00:00Z"
+  },
+  "__v": 0
+}]
