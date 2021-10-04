@@ -6,7 +6,7 @@ require("./api/data/studentDB");
 const router =  require("./api/router/students");
 
 
-app.set("port",4000)
+app.set("port",3000)
 app.use(express.urlencoded({extended:false}));
 app.use(express.json({extended:false}));
 app.use(express.static(path.join(__dirname,"public")));

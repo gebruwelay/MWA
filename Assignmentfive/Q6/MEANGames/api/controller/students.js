@@ -38,7 +38,8 @@ const edit = (req, res) => {
            res.status(404).json({"message":"id not found"});
        }
     
-     data.title = req.body.name;
+     data.name = req.body.name;
+     data.gpa =parseFloat(req.body.gpa);
      data.save((err, result)=> {
          if(err)
          {
@@ -55,7 +56,8 @@ const addOne = (req, res) => {
     let data = {};
 
     if (req.body) {
-        data.name = req.body.title;
+        console.log(req.body.name);
+        data.name = req.body.name;
         data.gpa = parseFloat(req.body.gpa);
     }
     students.create(data, (err, data) => {
