@@ -17,10 +17,12 @@ router.route("/games/:id")
 
 router.route("/games/:id/publisher")
       .get(pubctrl.get);
+router.route("/games/:id/publisher/:publisherID")
+      .get(pubctrl.getOne);
 router.route("/games/:id/publisher")
       .post(pubctrl.add);
-router.route("/games/:id/publisher")
+router.route("/games/:id/publisher/:publisherID")
       .put(pubctrl.update);
-router.route("/games/:id/publisher")
+router.route("/games/:id/publisher/:publisherID")
       .delete(pubctrl.delete);
 module.exports= router;
