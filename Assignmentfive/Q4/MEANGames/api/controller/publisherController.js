@@ -140,6 +140,8 @@ const _addPublisher = (req,res,game)=> {
     
     if(req.body)
     {
+        console.log("I am ");
+        console.log(game);
         game.publisher.name = req.body.publisher.name;
         game.publisher.country = req.body.publisher.country;
     }
