@@ -1,7 +1,11 @@
 
 const mongoose = require('mongoose');
-const dbname = "tvshowsDB";
-const dburl = "mongodb://localhost:27017/"+dbname;
+require("dotenv").config();
+
+//const dbname = "tvshowsDB";
+//const dburl = "mongodb://localhost:27017/"+dbname;
+const dburl = process.env.PROTOCOL+"://"+process.env.HOST+":"+process.env.DBPORT+"/"+process.env.DBNAME;
+
 require("./schema.js")
 
 mongoose.connect(dburl);
