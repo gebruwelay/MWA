@@ -49,6 +49,11 @@ const deleteSeason = (req,res)=> {
             res.status(500).json({"message":err.message});
             return;
         }
+        if(!show)
+        {
+            res.status(404).json({"message":"ID not found"});
+            return;
+        }
         _deleteSeason(req,res,show);
     })
 
@@ -107,6 +112,11 @@ const update = (req,res)=> {
         if(err)
         {
             res.status(500).json({"message":err.message});
+            return;
+        }
+        if(!show)
+        {
+            res.status(404).json({"message":"ID not found"})
             return;
         }
         _updateSeason(req,res,show);
@@ -174,7 +184,11 @@ const getOne= (req, res) => {
             res.status(500).json({"message":err.message});
             return;
         }
-        
+        if(!show)
+        {
+            res.status(404).json({"message":"ID not found"})
+            return;
+        }
         _selectSeason(req,res,show)
 
     })
@@ -221,6 +235,11 @@ const add = (req,res)=> {
         if(err)
         {
             res.status(500).json({"message":err.message});
+            return;
+        }
+        if(!show)
+        {
+            res.status(404).json({"message":"ID not found"})
             return;
         }
       _addSeason(req,res,show);

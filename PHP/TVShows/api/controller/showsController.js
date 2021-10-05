@@ -90,6 +90,10 @@ const getAll = (req, res) => {
     if (req.query.count && req.query.count <= 9) {
         count = parseInt(req.query.count);
     }
+    if(isNaN(count))
+    {
+        res.status(404).json({"message":"invalid id"});
+    }
     shows.find({}).limit(count).exec((err, data) => {
         if (err) {
             res.status(500).json({ "message": "failed to retrieve the data" });
