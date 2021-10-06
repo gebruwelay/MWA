@@ -4,6 +4,7 @@ function covidFactory($http) {
         getAll: getAll
     };
     function getAll() {
+        console.log("I am inside getall");
         return $http.get("https://coronavirus.m.pipedream.net/")
         .then(complete).catch(failed);
     }

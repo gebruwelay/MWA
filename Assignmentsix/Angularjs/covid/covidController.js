@@ -1,8 +1,8 @@
-angular.module("covid",[]).controller("mycovidController",covidFunc);
+angular.module("covid",[]).controller("covidController",covidController);
 
-function covidFunc (covidFactory){
+function covidController (covidFactory){
     const vm =this;
-    covidFactory.complete.then((respnse)=>{
+    covidFactory.getAll().then((respnse)=>{
         vm.covids = response;
     });
 }
