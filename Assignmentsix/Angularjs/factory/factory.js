@@ -9,7 +9,7 @@ function covidFactory($http) {
         .then(complete).catch(failed);
     }
     function complete(response) {
-        return response.data;
+        return response.data.rawData;
     }
     function failed(error) {
         return error.message;
