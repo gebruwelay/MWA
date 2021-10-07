@@ -2,12 +2,12 @@ const express = require('express');
 const app = express();
 const path = require('path');
 require("./api/data/db");
-require("dotenv").config();
-
-const router =  require("./api/router/showsRouter");
 
 
-app.set("port",process.env.PORT)
+const router =  require("./api/router/games");
+
+
+app.set("port",3000)
 app.use(express.urlencoded({extended:false}));
 app.use(express.json({extended:false}));
 app.use("/node_modules",express.static(path.join(__dirname,"node_modules")))
@@ -18,5 +18,5 @@ app.use((req,res)=> {
 })
 app.use("/api", router)
 const server = app.listen(app.get("port"), ()=>{
-    console.log("server running at ", process.env.PORT);
+    console.log("server running at ", server.address().port);
 });
