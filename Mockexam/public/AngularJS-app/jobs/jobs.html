@@ -1,0 +1,20 @@
+
+longitude: <input type="number" step=any  ng-model="jobsCtrl.lng"/><br/>
+latitude: <input type="number" step=any ng-model="jobsCtrl.lat"/><br/>
+maximum Distance: <input type="number" step=any ng-model="jobsCtrl.maxDis"/><br/>
+<button ng-click="jobsCtrl.getLimit()"> search</button>
+<ul>
+<li ng-repeat="job in jobsCtrl.jobs">
+     <a ng-href="#!/jobs/{{job._id}}">{{job.title}}</a> 
+     <button ng-click="jobsCtrl.deleteOne(job._id)">X</a></button>
+     <a ng-href="#!/jobs/edit/{{job._id}}">edit</a>
+    </li>
+</ul>
+<select ng-change="jobsCtrl.getLimit()" ng-model="jobsCtrl.count">
+    <option value="1" >1</option>
+    <option value="2" >2</option>
+    <option value="3" >3</option>
+    <option value="4" >4</option>
+    <option value="5" >5</option>
+</select>
+<a ng-href="#!/jobs/add">Add Job</a>
