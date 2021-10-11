@@ -4,8 +4,8 @@
     <ul><li ng-repeat="season in showCtrl.show.season">
         {{season.name}} <br/>
        releaseDate: {{season.releaseDate|dateFilter}}
-       <button ng-click="showsCtrl.deleteSeason(season._id)">delete</button>
-       <button> <a ng-href="#!/shows/edit/{{season._id}}/seasons">edit</a> </button>
+       <button ng-click="showCtrl.deleteSeason(showCtrl.show._id,season._id)">delete</button>
+       <button> <a ng-href="#!/shows/edit/{{showCtrl.show._id}}/season/{{season._id}}/">edit</a> </button>
     </li>
     </ul>
     <li>Release Date:{{showCtrl.show.releaseDate|dateFilter}}</li>

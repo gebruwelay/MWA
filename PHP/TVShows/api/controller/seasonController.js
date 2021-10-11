@@ -73,7 +73,7 @@ const _updateSeason= (req,res,show)=> {
     {
         data.name = req.body.season.name;
         data.part = req.body.season.part;
-        data.realeaseDate = new Date(req.body.releaseDate);
+        data.releaseDate = new Date(req.body.season.releaseDate);
     }
     let item = show.season.find(itm=>{
         if(itm._id.equals(id)){

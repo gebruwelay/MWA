@@ -16,9 +16,7 @@ function showsController(showsFactory)
             });
         }
     }
-    vm.deleteSeason = function (id) {
-        
-    }
+    
     vm.getLimit = function () {
         if (vm.name) {
             showsFactory.getAll(vm.name).then(function (response) {

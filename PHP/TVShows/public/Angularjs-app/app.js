@@ -22,7 +22,7 @@ function config($routeProvider) {
             templateUrl: "angularjs-app/editShow/edit.html",
             controller: "editShowController",
            controllerAs: "vm"
-        }).when("/shows/edit/:id/seasons", {
+        }).when("/shows/edit/:id/season/:season_id", {
             templateUrl: "angularjs-app/editSeason/edit.html",
             controller: "editSeasonController",
            controllerAs: "vm"
