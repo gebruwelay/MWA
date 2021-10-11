@@ -1,5 +1,12 @@
 
 <ul>
     <li>Name:{{showCtrl.show.name}}</li>
+    <ul><li ng-repeat="season in showCtrl.show.season">
+        {{season.name}} <br/>
+       releaseDate: {{season.releaseDate|dateFilter}}
+       <button ng-click="showsCtrl.deleteSeason(season._id)">delete</button>
+       <button> <a ng-href="#!/shows/edit/{{season._id}}/seasons">edit</a> </button>
+    </li>
+    </ul>
     <li>Release Date:{{showCtrl.show.releaseDate|dateFilter}}</li>
 </ul>

@@ -87,15 +87,24 @@ const getOne = (req, res) => {
 }
 const getAll = (req, res) => {
     let count = 6;
+    let query = {};
+
+    if(req.query.name)
+    {
+        query.name = req.query.name;
+    }
+
     if (req.query.count && req.query.count <= 9) {
         count = parseInt(req.query.count);
     }
+    if(req.query)
     if(isNaN(count))
     {
         res.status(404).json({"message":"invalid id"});
     }
-    shows.find({}).limit(count).exec((err, data) => {
+    shows.find(query).limit(count).exec((err, data) => {
         if (err) {
+            console.log(err.message);
             res.status(500).json({ "message": "failed to retrieve the data" });
             return;
         }

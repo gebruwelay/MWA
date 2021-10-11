@@ -1,6 +1,14 @@
 
+Search By Name: <input type="text"   ng-model="showsCtrl.name"/><br/>
+<button ng-click="showsCtrl.getLimit()"> search</button>
 <ul>
     <li ng-repeat="show in showsCtrl.shows">
         <a ng-href="#!/shows/{{show._id}}">{{show.name}}</a>
+
+        <button ng-click="showsCtrl.deleteOne(show._id)">delete</button>
+       <button> <a ng-href="#!/shows/edit/{{show._id}}">edit</a> </button>
+       <button> <a ng-href="#!/shows/add/{{show._id}}">Add Season</a> </button>
     </li>
 </ul>
+<button><a ng-href="#!/shows/add">Add Show</a> </button>
+
