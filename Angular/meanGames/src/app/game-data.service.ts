@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Game } from './list-games/list-games.component';
 
+import { Model } from './model';
 @Injectable({
   providedIn: 'root'
 })
@@ -12,17 +12,17 @@ export class GameDataService {
   constructor(private http: HttpClient) {
   }
   public getGames()
-    : Promise<Game[]> {
+    : Promise<Model[]> {
     const url: string = this.apiBaseUrl + "/games";
     return this.http.get(url).toPromise()
-      .then(response => response as Game[])
+      .then(response => response as Model[])
       .catch(this.handleError);
   }
   public getGame(gameId: string)
-    : Promise<Game> {
+    : Promise<Model> {
     const url: string = this.apiBaseUrl + "/games/" + gameId;
     return this.http.get(url).toPromise()
-      .then(response => response as Game)
+      .then(response => response as Model)
       .catch(this.handleError);
   }
   private handleError(error: any): Promise<any> {

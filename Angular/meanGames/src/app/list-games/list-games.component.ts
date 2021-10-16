@@ -22,4 +22,5 @@ export class ListGamesComponent implements OnInit {
 export class Game {
     title!: string;
     price!: number;
+    _id!:string;
 }

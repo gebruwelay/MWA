@@ -6,11 +6,13 @@ import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ListGamesComponent } from './list-games/list-games.component';
+import { OneGameComponent } from './one-game/one-game.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListGamesComponent
+    ListGamesComponent,
+    OneGameComponent
   ],
   imports: [
     BrowserModule,
@@ -20,6 +22,9 @@ import { ListGamesComponent } from './list-games/list-games.component';
       {
         path:"games",
         component: ListGamesComponent
+      },{
+        path:"games/:id",
+        component: OneGameComponent
       }
     ])
    
