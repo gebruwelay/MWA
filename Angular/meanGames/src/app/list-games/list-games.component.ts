@@ -13,6 +13,7 @@ export class ListGamesComponent implements OnInit {
   ngOnInit(): void {
    // this.gameDataService.getGames();
     this.gameDataService.getGames().then(response => {
+      console.log(response)
       this.games = response
     });
   }
