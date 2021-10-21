@@ -1,0 +1,11 @@
+<p>edit works!</p>
+
+<form #gameForm = "ngForm" (ngSubmit)="onSubmit()">
+    tite:  <input type="text" name="title" [(ngModel)] = "model.title" required /><br/><br/>
+    price:  <input type="text" name="price" [(ngModel)] = "model.price" required/><br/><br/>
+    year:  <input type="number" name="year"  [(ngModel)] = "model.year" required/><br/><br/>
+    Min Players:   <input type="text" name="minPlayers" [(ngModel)] = "model.minPlayers" required/><br/> <br/>
+    Max Players:  <input type="text" name="maxPlayers" [(ngModel)] = "model.maxPlayers" required/><br/> <br/>
+     Min Age:  <input type="text" name="minAge" [(ngModel)] = "model.minAge" required/><br/>
+ <button type="submit" [disabled]="!gameForm.form.valid"> save </button>
+ </form>

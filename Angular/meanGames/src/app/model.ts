@@ -7,4 +7,6 @@ export class Model {
     minPlayers!: number;
     minAge!: number;
     reviews!: string;
+    
+    
 }

@@ -18,6 +18,10 @@ export class ListGamesComponent implements OnInit {
     });
   }
 
+  onClick(id:string) {
+    console.log(id);
+    this.gameDataService.deleteGame(id);
+  }
 }
 export class Game {
     title!: string;
