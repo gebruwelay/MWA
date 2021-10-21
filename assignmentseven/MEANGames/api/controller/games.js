@@ -47,6 +47,7 @@ const edit = (req, res) => {
      data.save((err, result)=> {
          if(err)
          {
+            console.log(err.message)
              res.status(500).json({"message": err.message})
              return;
          }

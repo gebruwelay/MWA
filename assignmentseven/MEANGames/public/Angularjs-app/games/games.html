@@ -2,6 +2,10 @@
 <ul>
 
     <li ng-repeat="game in gamesCtrl.games">
-        <a ng-href="#!/games/{{game._id}}">{{game.title}}</a>
+       <a ng-href="#!/games/{{game._id}}">{{game.title}}</a>
+        <a ng-href="#!/games/edit/{{game._id}}">edit</a>
+        <button ng-click="gamesCtrl.deleteGame(game._id)">delete</button>
     </li>
 </ul>
+
+<a ng-href="#!/games/add">add</a>
